@@ -1,10 +1,17 @@
-'use client';
+// Header.jsx
+"use client";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import LoginWithGoogle from "./LoginWithGoogle";
+import Link from "next/link";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebaseConfig";
+import { useEffect, useState } from "react";
 
-export default function Header() {
+export default function Header({ user, getUser }) {
+  const [user2, setUser2] = useState(null)
+  useEffect(()=>{setUser2(user)}, [user])
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -12,11 +19,17 @@ export default function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Sign Up</Nav.Link>
-            <Nav.Link href="#link">Sign In</Nav.Link>
+            {!user2 && <LoginWithGoogle getUser={getUser} />}
+            {user2 && (
+              <div className="btn btn-primary" onClick={() => signOut(auth)}>
+                Sign Out
+              </div>
+            )}
+            {user2 && <Link href="/dashboard">Dashboard</Link>}
           </Nav>
         </Navbar.Collapse>
       </Container>
+      {console.log(user2)}
     </Navbar>
   );
 }

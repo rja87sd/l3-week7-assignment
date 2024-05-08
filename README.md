@@ -15,6 +15,21 @@
 ![alt text](image-6.png)
 
 ### Challenges Encountered
-3. LocalNews will not display on the page.
+1. LocalNews will not display on the page.
 
 ## Day 2
+### Tasks Completed
+1. Implement Login with Google functionality.
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
+![alt text](image-11.png)
+2. Implement Post to Page functionality.
+![alt text](image-12.png)
+![alt text](image-13.png)
+
+### Challenges Encountered
+1. Encountered issues with getting Google Login functionality to work. Solution: Was not properly passing user as props.
+
+## Day3

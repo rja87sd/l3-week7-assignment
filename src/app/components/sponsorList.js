@@ -1,3 +1,4 @@
+// sponsorList.js
 export const sponsors = [
   {
     name: "Airport Express",

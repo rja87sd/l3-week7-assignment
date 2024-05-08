@@ -1,18 +1,17 @@
+// Hero.jsx
+"use client";
 import React from "react";
+import LoginWithGoogle from "./LoginWithGoogle";
 
-export default function Hero() {
+export default function Hero({ getUser }) {
   return (
-    <section>
+    <section className="text-center">
       <h2>Welcome to our Community Marketplace!</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni quasi
-        consectetur nisi, impedit deleniti nesciunt, sunt iure modi aliquam quod
-        hic laborum molestiae eius possimus, asperiores iste! Aliquid,
-        accusamus. Fuga?
+        Why wait? Join us now and start sharing your items with your neighbors!
       </p>
-      <p>Why wait? Join us now and start sharing your items with your neighbors!</p>
       <p>It's easy, fast, and convenient!</p>
-      <div className="btn btn-primary">Sign Up!</div>
+      <LoginWithGoogle getUser={getUser} />
     </section>
   );
 }
