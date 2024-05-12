@@ -25,7 +25,7 @@ export default function Hero() {
         Why wait? Join us now and start sharing your items with your neighbors!
       </p>
       {/* Third paragraph emphasizing the ease, speed, and convenience of the platform. */}
-      <p className="text-gray-300 mb-5">It's easy, fast, and convenient.</p>
+      <p className="text-gray-300 mb-5">It&apos;s easy, fast, and convenient.</p>
     </section>
   );
 }
