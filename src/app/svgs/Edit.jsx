@@ -1,5 +1,7 @@
-// Credit to Lewis Benson for sharing this code and showing me how to set it up in class.
-import React from "react";  // Import React for building the component.
+// Credit to Lewis Benson for guiding us through this assignment, sharing the code for those of us who fell behind, and helping us to understand how this all works.
+// Credit to ChatGPT for assistance, code organization, and code comments.
+
+import React from "react"; // Import React for building the component.
 
 // Define and export the Edit function component, which renders an SVG icon.
 export default function Edit() {
@@ -27,4 +29,3 @@ export default function Edit() {
     </svg>
   );
 }
-
